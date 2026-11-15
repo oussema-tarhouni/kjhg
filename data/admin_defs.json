@@ -1,0 +1,547 @@
+[
+ {
+  "key": "users",
+  "title": "Users",
+  "columns": [
+   "id",
+   "name",
+   "email",
+   "phone",
+   "role",
+   "level",
+   "status",
+   "preferred_category",
+   "email_verified_at",
+   "phone_verified_at"
+  ],
+  "fields": [
+   {
+    "key": "name",
+    "label": "Name"
+   },
+   {
+    "key": "email",
+    "label": "Email"
+   },
+   {
+    "key": "phone",
+    "label": "Phone"
+   },
+   {
+    "key": "role",
+    "label": "Role",
+    "type": "select",
+    "options": [
+     "user",
+     "admin"
+    ]
+   },
+   {
+    "key": "level",
+    "label": "Level",
+    "type": "select",
+    "options": [
+     "Initiation",
+     "Debutant",
+     "Intermediaire",
+     "Avancee",
+     "Expert"
+    ]
+   },
+   {
+    "key": "status",
+    "label": "Status",
+    "type": "select",
+    "options": [
+     "pending_category",
+     "pending_approval",
+     "approved",
+     "rejected"
+    ]
+   },
+   {
+    "key": "preferred_category",
+    "label": "Preferred Category",
+    "type": "select",
+    "options": [
+     "",
+     "Pilates",
+     "Dance Orientale",
+     "Zumba",
+     "Dance Tunisienne",
+     "Body Attack",
+     "Body Combat",
+     "Body Balance",
+     "Step",
+     "Lia",
+     "Yoga",
+     "Cardio Mix",
+     "CAF",
+     "Abdo",
+     "Circuit Training",
+     "Zumba Kids",
+     "Cross Fit Kids",
+     "EMOM"
+    ]
+   },
+   {
+    "key": "avatar",
+    "label": "Avatar",
+    "type": "image"
+   }
+  ]
+ },
+ {
+  "key": "trainers",
+  "title": "Trainers",
+  "columns": [
+   "id",
+   "name",
+   "specialty"
+  ],
+  "fields": [
+   {
+    "key": "name",
+    "label": "Name"
+   },
+   {
+    "key": "specialty",
+    "label": "Specialty"
+   },
+   {
+    "key": "bio",
+    "label": "Bio",
+    "type": "textarea"
+   },
+   {
+    "key": "avatar",
+    "label": "Avatar",
+    "type": "image"
+   }
+  ]
+ },
+ {
+  "key": "classes",
+  "title": "Classes",
+  "columns": [
+   "id",
+   "name",
+   "trainer_name",
+   "category",
+   "location",
+   "level",
+   "starts_at",
+   "ends_at",
+   "capacity",
+   "spots_left"
+  ],
+  "fields": [
+   {
+    "key": "name",
+    "label": "Name"
+   },
+   {
+    "key": "trainer_id",
+    "label": "Trainer ID",
+    "type": "number"
+   },
+   {
+    "key": "category",
+    "label": "Category",
+    "type": "select",
+    "options": [
+     "",
+     "Pilates",
+     "Dance Orientale",
+     "Zumba",
+     "Dance Tunisienne",
+     "Body Attack",
+     "Body Combat",
+     "Body Balance",
+     "Step",
+     "Lia",
+     "Yoga",
+     "Cardio Mix",
+     "CAF",
+     "Abdo",
+     "Circuit Training",
+     "Zumba Kids",
+     "Cross Fit Kids",
+     "EMOM"
+    ]
+   },
+   {
+    "key": "level",
+    "label": "Level (Pilates)",
+    "type": "select",
+    "options": [
+     "",
+     "Initiation",
+     "Debutant",
+     "Intermediaire",
+     "Avancee",
+     "Expert"
+    ]
+   },
+   {
+    "key": "location",
+    "label": "Location"
+   },
+   {
+    "key": "starts_at",
+    "label": "Starts At",
+    "type": "datetime-local"
+   },
+   {
+    "key": "ends_at",
+    "label": "Ends At",
+    "type": "datetime-local"
+   },
+   {
+    "key": "capacity",
+    "label": "Capacity",
+    "type": "number"
+   }
+  ]
+ },
+ {
+  "key": "class-categories",
+  "title": "Class Categories",
+  "columns": [
+   "id",
+   "name",
+   "is_active",
+   "sort_order"
+  ],
+  "fields": [
+   {
+    "key": "name",
+    "label": "Name"
+   },
+   {
+    "key": "is_active",
+    "label": "Active",
+    "type": "checkbox"
+   },
+   {
+    "key": "sort_order",
+    "label": "Sort Order",
+    "type": "number"
+   }
+  ]
+ },
+ {
+  "key": "plans",
+  "title": "Membership Plans",
+  "columns": [
+   "id",
+   "name",
+   "price",
+   "classes_per_month",
+   "duration_months",
+   "category",
+   "is_active"
+  ],
+  "fields": [
+   {
+    "key": "name",
+    "label": "Name"
+   },
+   {
+    "key": "price",
+    "label": "Price",
+    "type": "number"
+   },
+   {
+    "key": "classes_per_month",
+    "label": "Classes/Month (blank=unlimited)",
+    "type": "number"
+   },
+   {
+    "key": "duration_months",
+    "label": "Duration (months)",
+    "type": "number"
+   },
+   {
+    "key": "category",
+    "label": "Category",
+    "type": "select",
+    "options": []
+   },
+   {
+    "key": "is_active",
+    "label": "Active",
+    "type": "checkbox"
+   }
+  ]
+ },
+ {
+  "key": "memberships",
+  "title": "Memberships",
+  "columns": [
+   "id",
+   "user_name",
+   "plan_name",
+   "status",
+   "classes_used_this_month",
+   "started_at",
+   "renews_at"
+  ],
+  "fields": [
+   {
+    "key": "status",
+    "label": "Status",
+    "type": "select",
+    "options": [
+     "pending",
+     "active",
+     "expired",
+     "cancelled"
+    ]
+   },
+   {
+    "key": "plan_id",
+    "label": "Plan ID",
+    "type": "number"
+   },
+   {
+    "key": "classes_used_this_month",
+    "label": "Classes Used This Month",
+    "type": "number"
+   },
+   {
+    "key": "started_at",
+    "label": "Started At",
+    "type": "date"
+   },
+   {
+    "key": "renews_at",
+    "label": "Renews At",
+    "type": "date"
+   }
+  ]
+ },
+ {
+  "key": "bookings",
+  "title": "Bookings",
+  "columns": [
+   "id",
+   "user_name",
+   "class_name",
+   "starts_at",
+   "status"
+  ],
+  "fields": [
+   {
+    "key": "status",
+    "label": "Status",
+    "type": "select",
+    "options": [
+     "booked",
+     "cancelled",
+     "attended",
+     "no_show"
+    ]
+   }
+  ]
+ },
+ {
+  "key": "workouts",
+  "title": "Workouts",
+  "columns": [
+   "id",
+   "user_name",
+   "type",
+   "duration_minutes",
+   "calories_burned",
+   "performed_at"
+  ],
+  "fields": [
+   {
+    "key": "user_id",
+    "label": "User ID",
+    "type": "number"
+   },
+   {
+    "key": "class_id",
+    "label": "Class ID (optional)",
+    "type": "number"
+   },
+   {
+    "key": "type",
+    "label": "Type"
+   },
+   {
+    "key": "duration_minutes",
+    "label": "Duration (min)",
+    "type": "number"
+   },
+   {
+    "key": "calories_burned",
+    "label": "Calories Burned",
+    "type": "number"
+   },
+   {
+    "key": "performed_at",
+    "label": "Performed At",
+    "type": "date"
+   }
+  ]
+ },
+ {
+  "key": "diet-logs",
+  "title": "Diet Logs",
+  "columns": [
+   "id",
+   "user_name",
+   "meal_type",
+   "description",
+   "calories",
+   "logged_at"
+  ],
+  "fields": [
+   {
+    "key": "user_id",
+    "label": "User ID",
+    "type": "number"
+   },
+   {
+    "key": "meal_type",
+    "label": "Meal Type",
+    "type": "select",
+    "options": [
+     "breakfast",
+     "lunch",
+     "dinner",
+     "snack"
+    ]
+   },
+   {
+    "key": "description",
+    "label": "Description"
+   },
+   {
+    "key": "calories",
+    "label": "Calories",
+    "type": "number"
+   },
+   {
+    "key": "logged_at",
+    "label": "Logged At",
+    "type": "date"
+   }
+  ]
+ },
+ {
+  "key": "products",
+  "title": "Store",
+  "columns": [
+   "id",
+   "name",
+   "category",
+   "price",
+   "stock",
+   "is_active"
+  ],
+  "fields": [
+   {
+    "key": "name",
+    "label": "Name"
+   },
+   {
+    "key": "category",
+    "label": "Category",
+    "type": "select",
+    "options": [
+     "supplements",
+     "apparel",
+     "accessories"
+    ]
+   },
+   {
+    "key": "description",
+    "label": "Description",
+    "type": "textarea"
+   },
+   {
+    "key": "price",
+    "label": "Price",
+    "type": "number"
+   },
+   {
+    "key": "stock",
+    "label": "Stock",
+    "type": "number"
+   },
+   {
+    "key": "image",
+    "label": "Image",
+    "type": "image"
+   },
+   {
+    "key": "is_active",
+    "label": "Active",
+    "type": "checkbox"
+   }
+  ]
+ },
+ {
+  "key": "posters",
+  "title": "Posters",
+  "columns": [
+   "id",
+   "username",
+   "location",
+   "text",
+   "created_at"
+  ],
+  "fields": [
+   {
+    "key": "username",
+    "label": "Username"
+   },
+   {
+    "key": "location",
+    "label": "Location"
+   },
+   {
+    "key": "text",
+    "label": "Description",
+    "type": "textarea"
+   },
+   {
+    "key": "image",
+    "label": "Image (optional)",
+    "type": "image"
+   }
+  ]
+ },
+ {
+  "key": "notifications",
+  "title": "Notifications",
+  "columns": [
+   "id",
+   "user_id",
+   "message",
+   "is_read",
+   "created_at"
+  ],
+  "fields": [
+   {
+    "key": "user_id",
+    "label": "User ID",
+    "type": "number"
+   },
+   {
+    "key": "message",
+    "label": "Message",
+    "type": "textarea"
+   },
+   {
+    "key": "is_read",
+    "label": "Read",
+    "type": "checkbox"
+   }
+  ]
+ }
+]

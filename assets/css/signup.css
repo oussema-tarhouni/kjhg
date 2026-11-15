@@ -1,0 +1,12 @@
+@import 'auth-shared.css';
+
+.field__control--phone { display: flex; align-items: center; gap: 8px; }
+.field__prefix { color: var(--gray); font-weight: 600; font-size: 14.5px; padding-left: 2px; }
+.otp-form { flex-direction: column; }
+.otp-intro { color: var(--gray); font-size: 14px; margin-bottom: 6px; }
+.otp-resend { text-align: center; font-size: 13px; color: var(--gray-dim); margin-top: 4px; }
+.otp-resend a { color: var(--gold-light); }
+.signup-success { flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 20px 0; }
+.signup-success svg { width: 44px; height: 44px; color: var(--green-light); }
+.signup-success h2 { color: var(--white); font-size: 20px; margin: 4px 0 0; }
+.signup-success p { color: var(--gray); font-size: 14px; }

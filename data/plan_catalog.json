@@ -1,0 +1,189 @@
+[
+ {
+  "key": "Strength",
+  "label": "Musculation",
+  "groups": [
+   {
+    "title": "MEMBERSHIP",
+    "tiers": [
+     {
+      "key": 101,
+      "planId": null,
+      "label": "1 Month",
+      "price": 90
+     },
+     {
+      "key": 102,
+      "planId": null,
+      "label": "2 Months",
+      "price": 160
+     },
+     {
+      "key": 103,
+      "planId": null,
+      "label": "3 Months",
+      "price": 180
+     },
+     {
+      "key": 104,
+      "planId": null,
+      "label": "6 Months",
+      "price": 340
+     },
+     {
+      "key": 105,
+      "planId": null,
+      "label": "12 Months",
+      "price": 700
+     }
+    ]
+   },
+   {
+    "title": "PRIVATE COACHING",
+    "tiers": [
+     {
+      "key": 106,
+      "planId": null,
+      "label": "1 Session",
+      "price": 30
+     },
+     {
+      "key": 107,
+      "planId": null,
+      "label": "8 Sessions",
+      "price": 200
+     },
+     {
+      "key": 108,
+      "planId": null,
+      "label": "16 Sessions",
+      "price": 320
+     },
+     {
+      "key": 109,
+      "planId": null,
+      "label": "Drop-in floor session",
+      "price": 10
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "key": "Pilates",
+  "label": "Pilates",
+  "groups": [
+   {
+    "title": "REFORMER — ESSENTIEL",
+    "tiers": [
+     {
+      "key": 201,
+      "planId": null,
+      "label": "8 sessions · 30 days",
+      "price": 260
+     },
+     {
+      "key": 202,
+      "planId": null,
+      "label": "12 sessions · 45 days",
+      "price": 360
+     },
+     {
+      "key": 203,
+      "planId": null,
+      "label": "24 sessions · 90 days",
+      "price": 550
+     },
+     {
+      "key": 204,
+      "planId": null,
+      "label": "48 sessions · 180 days",
+      "price": 1050
+     }
+    ]
+   },
+   {
+    "title": "REFORMER + PRIVÉ — PREMIUM",
+    "tiers": [
+     {
+      "key": 205,
+      "planId": null,
+      "label": "5R + 3P · 30 days",
+      "price": 290
+     },
+     {
+      "key": 206,
+      "planId": null,
+      "label": "7R + 5P · 45 days",
+      "price": 420
+     },
+     {
+      "key": 207,
+      "planId": null,
+      "label": "16R + 8P · 90 days",
+      "price": 750
+     },
+     {
+      "key": 208,
+      "planId": null,
+      "label": "38R + 10P · 180 days",
+      "price": 1300
+     }
+    ]
+   },
+   {
+    "title": "PILATES + MUSCULATION — INTÉGRAL",
+    "tiers": [
+     {
+      "key": 209,
+      "planId": null,
+      "label": "1 Month · 8 R",
+      "price": 320
+     },
+     {
+      "key": 210,
+      "planId": null,
+      "label": "3 Months · 24 R",
+      "price": 700
+     },
+     {
+      "key": 211,
+      "planId": null,
+      "label": "6 Months · 48 R",
+      "price": 1350
+     },
+     {
+      "key": 212,
+      "planId": null,
+      "label": "12 Months · 100 R",
+      "price": 2650
+     }
+    ]
+   },
+   {
+    "title": "PRIVATE SESSIONS",
+    "note": "R = Reformer  P = Privé (Cadillac, Wunda Chair, Barrel, Tower)",
+    "tiers": [
+     {
+      "key": 213,
+      "planId": null,
+      "label": "Reformer",
+      "price": 35
+     },
+     {
+      "key": 214,
+      "planId": null,
+      "label": "Private (any machine)",
+      "price": 45
+     },
+     {
+      "key": 215,
+      "planId": null,
+      "label": "8 Private sessions",
+      "price": 340
+     }
+    ]
+   }
+  ]
+ }
+]

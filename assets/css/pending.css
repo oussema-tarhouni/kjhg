@@ -1,0 +1,8 @@
+@import 'auth-shared.css';
+
+.auth--centered { justify-content: center; }
+.pending-card { align-items: center; text-align: center; gap: 12px; padding: 32px 24px; }
+.pending-card__icon { width: 48px; height: 48px; color: var(--gold-light); }
+.pending-card h1 { font-size: 20px; margin: 4px 0 0; }
+.pending-card p { color: var(--gray); font-size: 14px; max-width: 340px; }
+.auth-form__submit--secondary { background: transparent; border: 1.5px solid var(--border, #2a2a2a); color: var(--white); margin-top: 8px; }

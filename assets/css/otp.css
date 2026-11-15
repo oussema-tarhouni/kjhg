@@ -1,0 +1,9 @@
+@import 'auth-shared.css';
+
+.auth__panel--full{ flex:1 1 100%; }
+
+.auth__navbar--split{
+  justify-content:space-between;
+}
+
+#otp-phone-display{ color:var(--gold-light); font-weight:600; }
