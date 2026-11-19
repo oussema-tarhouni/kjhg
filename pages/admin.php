@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($act === 'save') {
       foreach ($active['fields'] as $f) {
         $t = $f['type'] ?? 'text'; $k = $f['key'];
-        if ($t === 'image') { if (!empty($_FILES[$k]['tmp_name']) && $_FILES[$k]['error'] === UPLOAD_ERR_OK) { $payload[$k] = new CURLFile($_FILES[$k]['tmp_name'], $_FILES[$k]['type'], $_FILES[$k]['name']); $files = true; } }
+        if ($t === 'image') continue; // uploaded files are read straight from $_FILES by the admin API (no cURL needed)
         elseif ($t === 'checkbox') $payload[$k] = isset($_POST[$k]) ? 1 : 0;
         elseif (isset($_POST[$k])) $payload[$k] = $_POST[$k];
       }
@@ -74,7 +74,7 @@ if ($section === 'resource' && ($editingId || !empty($_GET['new']))) {
     if (($f['type'] ?? '') === 'datetime-local') $editRow[$f['key']] = substr(str_replace(' ', 'T', $editRow[$f['key']]), 0, 16);
   }
 }
-$cell = fn($v) => h(is_array($v) ? json_encode($v) : $v);
+$cell = fn($v) => is_string($v) && str_starts_with($v, 'data:image/') ? '<img src="' . h($v) . '" alt="" style="width:40px;height:40px;border-radius:50%;object-fit:cover;display:block">' : h(is_array($v) ? json_encode($v) : $v);
 $singular = substr($active['title'], 0, -1);
 layout_begin('Admin · EOS Gym', ['admin']);
 ?>
@@ -161,7 +161,7 @@ layout_begin('Admin · EOS Gym', ['admin']);
           <?php elseif ($t === 'textarea'): ?>
             <textarea name="<?= h($k) ?>" rows="3"><?= h($v) ?></textarea>
           <?php elseif ($t === 'image'): ?>
-            <?php if (!empty($editRow[$k . '_url'])): ?><img src="<?= h($editRow[$k . '_url']) ?>" class="adm-file-preview"><?php endif; ?>
+            <?php $pv = $editRow[$k . '_url'] ?? $editRow[$k] ?? ''; if (is_string($pv) && $pv !== ''): ?><img src="<?= h($pv) ?>" class="adm-file-preview" style="max-width:120px;max-height:120px;object-fit:cover"><?php endif; ?>
             <input type="file" accept="image/*" name="<?= h($k) ?>">
           <?php else: ?>
             <input type="<?= h($t) ?>" name="<?= h($k) ?>" value="<?= h($v) ?>">

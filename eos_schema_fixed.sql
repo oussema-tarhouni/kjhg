@@ -33,41 +33,6 @@ CREATE TABLE IF NOT EXISTS tokens (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Phone OTP codes (WhatsApp signup verification)
-CREATE TABLE IF NOT EXISTS otp_codes (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT NOT NULL,
-    phone VARCHAR(20) NOT NULL,
-    code_hash CHAR(64) NOT NULL,
-    attempts TINYINT NOT NULL DEFAULT 0,
-    expires_at DATETIME NOT NULL,
-    used_at DATETIME DEFAULT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    INDEX idx_otp_user (user_id),
-    INDEX idx_otp_phone (phone),
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-);
-
-CREATE TABLE IF NOT EXISTS refresh_tokens (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT NOT NULL,
-    token_hash CHAR(64) NOT NULL UNIQUE,
-    expires_at DATETIME NOT NULL,
-    used_at DATETIME DEFAULT NULL,
-    revoked_at DATETIME DEFAULT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    INDEX idx_refresh_user (user_id),
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-);
-
-CREATE TABLE IF NOT EXISTS revoked_access_tokens (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    jti VARCHAR(64) NOT NULL UNIQUE,
-    expires_at DATETIME NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    INDEX idx_revoked_exp (expires_at)
-);
-
 -- ============ MEMBERSHIP ============
 
 CREATE TABLE IF NOT EXISTS membership_plans (

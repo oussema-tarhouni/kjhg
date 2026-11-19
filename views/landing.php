@@ -118,6 +118,7 @@
       <div class="team-card"><img src="<?= BASE ?>/assets/team/rami.jpeg" alt="Rami" /><b>Rami</b><span data-i18n="team.coach">Coach</span></div>
       <div class="team-card"><img src="<?= BASE ?>/assets/team/sourour.jpeg" alt="Sourour" /><b>Sourour</b><span data-i18n="team.coach">Coach</span></div>
       <div class="team-card"><img src="<?= BASE ?>/assets/team/ranim.jpeg" alt="Ranim" /><b>Ranim</b><span data-i18n="team.coach">Coach</span></div>
+      <div class="team-card"><img src="<?= BASE ?>/assets/team/samia.jpeg" alt="Ranim" /><b>Samia</b><span data-i18n="team.coach">Coach</span></div>
     </div>
   </div>
 </section>
@@ -305,7 +306,7 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
           </a>
           <div class="loc__socials">
-            <a href="https://wa.me/21600000000" target="_blank" rel="noopener" aria-label="WhatsApp" class="soc soc--wa">
+            <a href="https://wa.me/21654088881" target="_blank" rel="noopener" aria-label="WhatsApp" class="soc soc--wa">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.5-.3z"/></svg>
             </a>
             <a href="https://facebook.com/eosfitness" target="_blank" rel="noopener" aria-label="Facebook" class="soc">

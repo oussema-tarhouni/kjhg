@@ -639,9 +639,9 @@
 
         <div class="form-divider" style="margin-top:16px;">Contact us</div>
         <div class="help-contact" style="margin-bottom:22px;">
-          <a class="help-contact-btn" href="https://wa.me/21671234567" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#8fc25f" stroke-width="1.7"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.7 19L4 20z"/></svg>WhatsApp</a>
+          <a class="help-contact-btn" href="https://wa.me/21654088881" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#8fc25f" stroke-width="1.7"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.7 19L4 20z"/></svg>WhatsApp</a>
           <a class="help-contact-btn" href="mailto:support.eosfitness.tn"><svg viewBox="0 0 24 24" fill="none" stroke="#e6cc7a" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>Email us</a>
-          <a class="help-contact-btn" href="tel:+21671234567"><svg viewBox="0 0 24 24" fill="none" stroke="#e6cc7a" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>Call gym</a>
+          <a class="help-contact-btn" href="tel:+21654088881"><svg viewBox="0 0 24 24" fill="none" stroke="#e6cc7a" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>Call gym</a>
         </div>
 
         <div class="form-divider">Legal</div>

@@ -443,7 +443,7 @@ class DashboardComponent {
                 widget.innerHTML = trainers.length
                     ? trainers.slice(0, 3).map((t) => `
               <div class="trainer-row">
-                <div class="trainer-avatar">${this.initials(t.name)}</div>
+                <div class="trainer-avatar"${t.avatar ? ` style="background:url('${t.avatar}') center/cover;color:transparent"` : ''}>${this.initials(t.name)}</div>
                 <div><div class="trainer-name">${this.escapeHtml(t.name)}</div><div class="trainer-role">${this.escapeHtml(t.specialty || '')}</div></div>
               </div>`).join('')
                     : `<div class="trainer-row"><div class="trainer-role">No trainers found.</div></div>`;
@@ -452,7 +452,7 @@ class DashboardComponent {
                 page.innerHTML = trainers.length
                     ? trainers.map((t) => `
               <div class="trainer-card">
-                <div class="trainer-avatar">${this.initials(t.name)}</div>
+                <div class="trainer-avatar"${t.avatar ? ` style="background:url('${t.avatar}') center/cover;color:transparent"` : ''}>${this.initials(t.name)}</div>
                 <div class="trainer-name">${this.escapeHtml(t.name)}</div>
                 <div class="trainer-role">${this.escapeHtml(t.specialty || '')}</div>
                 <div class="trainer-bio">${this.escapeHtml(t.bio || '')}</div>
@@ -789,7 +789,7 @@ class DashboardComponent {
             toastEl.classList.add('show');
             toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2400);
         }
-        const ADMIN_WHATSAPP = '21671234567';
+        const ADMIN_WHATSAPP = '21654088881';
         function contactTrainer(trainerName) {
             const phoneField = document.querySelector('#page-editprofile input[type="tel"]');
             const userPhone = (phoneField && phoneField.value.trim()) || '+216 22 345 678';

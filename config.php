@@ -3,7 +3,7 @@
 define('API_BASE', rtrim(getenv('EOS_API_BASE') ?: 'http://localhost:3000/api', '/')); // the existing Node API
 define('BASE', rtrim(getenv('EOS_BASE') ?: '', '/'));                                   // sub-folder, e.g. /eos ('' = web root)
 define('APP_NAME', 'EOS Gym');
-define('DEFAULT_CATEGORIES', ['Pilates','Dance Orientale','Zumba','Dance Tunisienne','Body Attack','Body Combat','Body Balance','Step','Lia','Yoga','Cardio Mix','CAF','Abdo','Circuit Training','Zumba Kids','Cross Fit Kids','EMOM']);
+define('DEFAULT_CATEGORIES', ['Pilates','Dance Orientale','Zumba','Dance Tunisienne','Body Attack','Body Combat','Body Balance','Step','Lia','Yoga','Cardio Mix','CAF','Abdo','Circuit Training','Zumba Kids','Cross Fit Kids','EMOM','TRX']);
 
 // ---- MySQL (XAMPP defaults) ----
 define('DB_HOST', '127.0.0.1'); define('DB_PORT', 3306); define('DB_NAME', 'eos'); define('DB_USER', 'root'); define('DB_PASS', '');

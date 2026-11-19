@@ -3,3 +3,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.php [L]
 Options -Indexes
+
+# never serve logs, SQL dumps or docs
+<FilesMatch "\.(txt|log|sql|md)$">
+  Require all denied
+</FilesMatch>

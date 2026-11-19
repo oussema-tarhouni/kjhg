@@ -22,7 +22,7 @@ function admin_gate_route(string $m, string $p, array $b): array {
 function admin_resources(): array { static $R; return $R ??= [
   'users' => ['t' => 'users', 'sql' => 'SELECT id,name,email,phone,role,level,status,preferred_category,email_verified_at,phone_verified_at FROM users ORDER BY id DESC',
     'w' => ['name','email','phone','role','level','status','preferred_category'], 'null' => ['phone','level','preferred_category'], 'img' => ['avatar' => ['avatar','data']]],
-  'trainers' => ['t' => 'trainers', 'sql' => 'SELECT id,name,specialty,bio FROM trainers ORDER BY name', 'w' => ['name','specialty','bio'], 'null' => ['specialty','bio'], 'img' => ['avatar' => ['avatar','data']]],
+  'trainers' => ['t' => 'trainers', 'sql' => 'SELECT id,name,specialty,avatar,bio FROM trainers ORDER BY name', 'w' => ['name','specialty','bio'], 'null' => ['specialty','bio'], 'img' => ['avatar' => ['avatar','data']]],
   'classes' => ['t' => 'classes', 'sql' => "SELECT c.*,t.name trainer_name,GREATEST(c.capacity-(SELECT COUNT(*) FROM bookings b WHERE b.class_id=c.id AND b.status='booked'),0) spots_left FROM classes c JOIN trainers t ON t.id=c.trainer_id ORDER BY c.starts_at DESC",
     'w' => ['name','trainer_id','category','level','location','starts_at','ends_at','capacity'], 'null' => ['category','level','location'], 'int' => ['trainer_id','capacity'], 'dt' => ['starts_at','ends_at']],
   'class-categories' => ['t' => 'class_categories', 'sql' => 'SELECT * FROM class_categories ORDER BY sort_order,name', 'w' => ['name','is_active','sort_order'], 'int' => ['sort_order'], 'bool' => ['is_active']],

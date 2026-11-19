@@ -21,7 +21,7 @@ function layout_begin(string $title, array $css = [], string $bodyAttr = ''): vo
 // $js = module name in assets/js (page logic), $route = params exposed to the JS runtime
 function layout_end(?string $js = null, array $route = []): void {
   echo '<script>window.EOS_BASE=' . json_encode(BASE) . ';window.EOS_ROUTE=' . json_encode($route ?: new stdClass) . ';</script>';
-  if ($js) echo '<script type="module" src="' . url("assets/js/$js.js") . '"></script>';
+  if ($js) echo '<script type="module" src="' . url("assets/js/$js.js") . '?v=' . (int)@filemtime(dirname(__DIR__) . "/assets/js/$js.js") . '"></script>'; // ?v= makes browsers reload the script after each change
   echo '</body></html>';
 }
 function theme_script(): void { // light/dark toggle + password eye for server-rendered pages
