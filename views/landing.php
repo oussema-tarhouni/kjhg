@@ -14,7 +14,7 @@
     <div class="nav__actions">
       <div class="lang" id="lang-switch">
         <button class="lang__btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
-          <span id="lang-flag">🇬🇧</span><span id="lang-code">EN</span>
+          <span id="lang-flag">🇫🇷</span><span id="lang-code">FR</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="lang__menu" id="lang-menu">
@@ -57,7 +57,7 @@
     <p class="lead" data-i18n="hero.lead">Free weights, a reformer pilates studio, and group classes under one roof — with a front desk that actually remembers your name. Open early, open late, three floors near you.</p>
     <div class="hero__ctas">
       <a href="<?= url('signup') ?>" class="btn btn--gold" data-i18n="nav.join">Join Now</a>
-      <a href="#locations" class="btn btn--ghost" data-i18n="hero.findLocation">Find a Location</a>
+      <a href="#locations" class="btn btn--ghost" data-t='{"en":"Location","fr":"Localisation","tn":"الموقع"}'>Localisation</a>
     </div>
   </div>
   <div class="hero__scroll" data-i18n="hero.scroll">Scroll</div>
@@ -65,11 +65,10 @@
 
 <div class="stats">
   <div class="wrap">
-    <div class="stats__row">
-      <div class="stat"><div class="stat__num">12k+</div><div class="stat__label" data-i18n="stats.members">Active Members</div></div>
-      <div class="stat"><div class="stat__num">40+</div><div class="stat__label" data-i18n="stats.classes">Classes Weekly</div></div>
-      <div class="stat"><div class="stat__num">3</div><div class="stat__label" data-i18n="stats.locations">Locations</div></div>
-      <div class="stat"><div class="stat__num">5a–11p</div><div class="stat__label" data-i18n="stats.hours">Daily Hours</div></div>
+    <div class="stats__row" style="display:flex;justify-content:center;flex-wrap:wrap;gap:24px 64px;text-align:center;">
+      <div class="stat"><div class="stat__num">50+</div><div class="stat__label" data-i18n="stats.members">Active Members</div></div>
+      <div class="stat"><div class="stat__num">15+</div><div class="stat__label" data-t='{"en":"Classes per week","fr":"Cours par semaine","tn":"كورسات في الجمعة"}'>Cours par semaine</div></div>
+      <div class="stat"><div class="stat__num">8a–10p</div><div class="stat__label" data-i18n="stats.hours">Daily Hours</div></div>
     </div>
   </div>
 </div>
@@ -77,7 +76,7 @@
 <section class="about" id="about">
   <div class="wrap about__grid">
     <div class="about__media">
-      <img src="https://images.unsplash.com/photo-1517130038641-a774d04afb3c?auto=format&fit=crop&w=1000&q=80" alt="Instructor coaching a member through a lift" />
+      <img src="<?= BASE ?>/assets/gym/pilates-1.jpg" alt="Instructor coaching a member through a lift" />
       <div class="about__badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.9L21 11l-6.6 2.1L12 20l-2.4-6.9L3 11l6.6-2.1z"/></svg>
         <div><b data-i18n="about.badge.title">Est. 2014</b><span data-i18n="about.badge.sub">Locally owned, still coached</span></div>
@@ -98,8 +97,8 @@
           <b data-i18n="about.pillar2.title">Pilates Studio</b><span data-i18n="about.pillar2.desc">Reformer &amp; mat, small class sizes.</span>
         </div>
         <div class="pillar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <b data-i18n="about.pillar3.title">Community</b><span data-i18n="about.pillar3.desc">Members-only app &amp; real front desk.</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 20v-4M16 20v-4"/></svg>
+          <b data-t='{"en":"Group Class Room","fr":"Salle de cours collectifs","tn":"قاعة الكورسات الجماعية"}'>Salle de cours collectifs</b><span data-t='{"en":"Dedicated room for group classes.","fr":"Une salle dédiée aux cours collectifs.","tn":"قاعة مخصصة للكورسات الجماعية."}'>Une salle dédiée aux cours collectifs.</span>
         </div>
       </div>
     </div>
@@ -110,13 +109,15 @@
     <h2 class="display" style="font-size:clamp(24px,3vw,32px); margin-top:12px;" data-i18n="team.title">Administration &amp; Coaches</h2>
   </div>
   <div class="about__team">
-    <div class="team__grid">
-      <div class="team-card"><img src="<?= BASE ?>/assets/profile.png" alt="Sami Ben Amor" /><b>Sami Ben Amor</b><span data-i18n="team.gm">General Manager</span></div>
-      <div class="team-card"><img src="<?= BASE ?>/assets/profile.png" alt="Leila Haddad" /><b>Leila Haddad</b><span data-i18n="team.ops">Operations Director</span></div>
-      <div class="team-card"><img src="<?= BASE ?>/assets/profile.png" alt="Karim Mejri" /><b>Karim Mejri</b><span data-i18n="team.strength">Head Strength Coach</span></div>
-      <div class="team-card"><img src="<?= BASE ?>/assets/profile.png" alt="Nour Ayari" /><b>Nour Ayari</b><span data-i18n="team.pilates">Pilates Instructor</span></div>
-      <div class="team-card"><img src="<?= BASE ?>/assets/profile.png" alt="Yassine Trabelsi" /><b>Yassine Trabelsi</b><span data-i18n="team.group">Group Fitness Coach</span></div>
-      <div class="team-card"><img src="<?= BASE ?>/assets/profile.png" alt="Rania Chebbi" /><b>Rania Chebbi</b><span data-i18n="team.nutrition">Nutrition Coach</span></div>
+    <div class="team__grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,200px));justify-content:center;gap:24px;">
+      <div class="team-card"><img src="<?= BASE ?>/assets/team/ameni.jpeg" alt="Ameni" /><b>Ameni</b><span data-i18n="team.coach">Coach</span></div>
+      <div class="team-card"><img src="<?= BASE ?>/assets/team/ameur.jpeg" alt="Ameur" /><b>Ameur</b><span data-i18n="team.coach">Coach</span></div>
+      <div class="team-card"><img src="<?= BASE ?>/assets/team/Mouhamed.jpeg" alt="Mouhamed" /><b>Mouhamed</b><span data-i18n="team.coach">Coach</span></div>
+      <div class="team-card"><img src="<?= BASE ?>/assets/team/fedi.jpeg" alt="Fedi" /><b>Fedi</b><span data-i18n="team.coach">Coach</span></div>
+      <div class="team-card"><img src="<?= BASE ?>/assets/team/nourane.jpeg" alt="Nourane" /><b>Nourane</b><span data-i18n="team.coach">Coach</span></div>
+      <div class="team-card"><img src="<?= BASE ?>/assets/team/rami.jpeg" alt="Rami" /><b>Rami</b><span data-i18n="team.coach">Coach</span></div>
+      <div class="team-card"><img src="<?= BASE ?>/assets/team/sourour.jpeg" alt="Sourour" /><b>Sourour</b><span data-i18n="team.coach">Coach</span></div>
+      <div class="team-card"><img src="<?= BASE ?>/assets/team/ranim.jpeg" alt="Ranim" /><b>Ranim</b><span data-i18n="team.coach">Coach</span></div>
     </div>
   </div>
 </section>
@@ -130,7 +131,7 @@
     </div>
     <div class="programs__grid">
       <div class="card">
-        <div class="card__media"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Strength training floor with free weights" /></div>
+        <div class="card__media"><img src="<?= BASE ?>/assets/gym/pilates-2.jpg" alt="Strength training floor with free weights" /></div>
         <div class="card__body">
           <div class="card__tag" data-i18n="programs.c1.tag">Strength</div>
           <h3 data-i18n="programs.c1.title">Strength &amp; Conditioning</h3>
@@ -138,7 +139,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card__media"><img src="https://images.unsplash.com/photo-1754257319747-df51c384c0fa?auto=format&fit=crop&w=800&q=80" alt="Reformer pilates class in session" /></div>
+        <div class="card__media"><img src="<?= BASE ?>/assets/gym/pilates-3.jpg" alt="Reformer pilates class in session" /></div>
         <div class="card__body">
           <div class="card__tag" data-i18n="programs.c2.tag">Pilates</div>
           <h3 data-i18n="programs.c2.title">Reformer &amp; Mat Pilates</h3>
@@ -146,11 +147,11 @@
         </div>
       </div>
       <div class="card">
-        <div class="card__media"><img src="https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?auto=format&fit=crop&w=800&q=80" alt="Group fitness class" /></div>
+        <div class="card__media"><img src="<?= BASE ?>/assets/gym/pilates-4.jpg" alt="Group fitness class" /></div>
         <div class="card__body">
           <div class="card__tag" data-i18n="programs.c3.tag">Group Classes</div>
           <h3 data-i18n="programs.c3.title">HIIT, Cycle &amp; More</h3>
-          <p data-i18n="programs.c3.desc">40+ classes a week across every floor. Book your spot in the app before it fills up.</p>
+          <p data-i18n="programs.c3.desc">15+ classes a week across every floor. Book your spot in the app before it fills up.</p>
         </div>
       </div>
     </div>
@@ -162,7 +163,7 @@
     <div class="section-head">
       <div class="eyebrow" data-i18n="plans.eyebrow">Plans</div>
       <h2 data-i18n="plans.title">Pricing built to move you</h2>
-      <p data-i18n="plans.lead">Strength, pilates, or both — pick your track. Promo prices shown where available.</p>
+      <p data-i18n="plans.lead">Strength, pilates, or both — pick your track. </p>
     </div>
     <div class="plans__tabs">
       <button class="plans__tab is-active" data-tab="musc" data-action="switchPlan" data-arg="musc" onclick="__page.__run(event)" data-i18n="plans.tabMusc">Musculation</button>
@@ -172,23 +173,39 @@
     <div class="plans__panel is-active" id="panel-musc">
       <div class="price-grid">
         <div class="price-block">
-          <h3 data-i18n="plans.membership">Membership</h3>
+          <h3>Musculation + Classes</h3>
           <table class="price-table">
-            <tr><td>1 Month</td><td>90 DT</td></tr>
-            <tr><td>2 Months</td><td>160 DT</td></tr>
-            <tr><td>3 Months</td><td><s>225 DT</s>180 DT<span class="promo">Promo</span></td></tr>
-            <tr><td>6 Months</td><td><s>420 DT</s>340 DT<span class="promo">Promo</span></td></tr>
-            <tr><td>12 Months</td><td>700 DT</td></tr>
+            <tr><td>1 Month</td><td>110 DT</td></tr>
+            <tr><td>2 Months</td><td>180 DT</td></tr>
+            <tr><td>3 Months</td><td>250 DT</td></tr>
+            <tr><td>6 Months</td><td>450 DT</td></tr>
+            <tr><td>12 Months</td><td>750 DT</td></tr>
           </table>
         </div>
         <div class="price-block">
-          <h3 data-i18n="plans.privateCoaching">Private Coaching</h3>
+          <h3>Musculation + Classes + Pilates</h3>
+          <table class="price-table">
+            <tr><td>1 Month + classes + 8 R</td><td>360 DT</td></tr>
+            <tr><td>2 Months + classes + 16 R</td><td>640 DT</td></tr>
+            <tr><td>3 Months + classes + 24 R</td><td>800 DT</td></tr>
+            <tr><td>6 Months + classes + 48 R</td><td>1530 DT</td></tr>
+          </table>
+          <p class="price-note">R = Reformer &nbsp; P = Privé (Cadillac, Wunda Chair, Barrel, Tower)</p>
+        </div>
+        <div class="price-block">
+          <h3>Private Coaching</h3>
           <table class="price-table">
             <tr><td>1 Session</td><td>30 DT</td></tr>
             <tr><td>8 Sessions</td><td>200 DT</td></tr>
             <tr><td>16 Sessions</td><td>320 DT</td></tr>
           </table>
-          <p class="price-note" data-i18n="plans.dropIn">Drop-in floor session — 10 DT</p>
+        </div>
+        <div class="price-block">
+          <h3>Musculation Per Session</h3>
+          <table class="price-table">
+            <tr><td>1 Session</td><td>10 DT</td></tr>
+            <tr><td>1 Class session</td><td>20 DT</td></tr>
+          </table>
         </div>
       </div>
     </div>
@@ -196,40 +213,59 @@
     <div class="plans__panel" id="panel-pilates">
       <div class="price-grid">
         <div class="price-block">
-          <h3 data-i18n="plans.essentiel">Reformer — Essentiel</h3>
+          <h3>Essentiel — Reformer</h3>
           <table class="price-table">
-            <tr><td>8 sessions · 30 days</td><td>260 DT</td></tr>
-            <tr><td>12 sessions · 45 days</td><td>360 DT</td></tr>
-            <tr><td>24 sessions · 90 days</td><td>550 DT</td></tr>
-            <tr><td>48 sessions · 180 days</td><td>1050 DT</td></tr>
+            <tr><td>8 R · 30 days</td><td>260 DT</td></tr>
+            <tr><td>12 R · 45 days</td><td>360 DT</td></tr>
+            <tr><td>24 R · 90 days</td><td>550 DT</td></tr>
+            <tr><td>48 R · 180 days</td><td>1050 DT</td></tr>
           </table>
         </div>
         <div class="price-block">
-          <h3 data-i18n="plans.premium">Reformer + Privé — Premium</h3>
+          <h3>Premium — Reformer + Privé</h3>
           <table class="price-table">
             <tr><td>5R + 3P · 30 days</td><td>290 DT</td></tr>
             <tr><td>7R + 5P · 45 days</td><td>420 DT</td></tr>
             <tr><td>16R + 8P · 90 days</td><td>750 DT</td></tr>
             <tr><td>38R + 10P · 180 days</td><td>1300 DT</td></tr>
           </table>
+          <p class="price-note">R = Reformer &nbsp; P = Privé (Cadillac, Wunda Chair, Barrel, Tower)</p>
         </div>
         <div class="price-block">
-          <h3 data-i18n="plans.integral">Pilates + Musculation — Intégral</h3>
+          <h3>Intégral — Pilates + Musculation</h3>
           <table class="price-table">
-            <tr><td>1 Month · 8 R</td><td>320 DT</td></tr>
-            <tr><td>3 Months · 24 R</td><td>700 DT</td></tr>
-            <tr><td>6 Months · 48 R</td><td>1350 DT</td></tr>
-            <tr><td>12 Months · 100 R</td><td>2650 DT</td></tr>
+            <tr><td>1 Month · Musculation + 8 R</td><td>320 DT</td></tr>
+            <tr><td>3 Months · Musculation + 24 R</td><td>700 DT</td></tr>
+            <tr><td>6 Months · Musculation + 48 R</td><td>1350 DT</td></tr>
+            <tr><td>12 Months · Musculation + 100 R</td><td>2650 DT</td></tr>
           </table>
         </div>
         <div class="price-block">
-          <h3 data-i18n="plans.privateSessions">Private Sessions</h3>
+          <h3>Balance — Pilates + Classes</h3>
           <table class="price-table">
-            <tr><td>Reformer</td><td>35 DT</td></tr>
-            <tr><td>Private (any machine)</td><td>45 DT</td></tr>
+            <tr><td>1 Month · 8 R</td><td>300 DT</td></tr>
+            <tr><td>2 Months · 16 R</td><td>560 DT</td></tr>
+            <tr><td>3 Months · 24 R</td><td>670 DT</td></tr>
+            <tr><td>6 Months · 48 R</td><td>1290 DT</td></tr>
+          </table>
+        </div>
+        <div class="price-block">
+          <h3>Super Premium — Reformer + Privé + Classes</h3>
+          <table class="price-table">
+            <tr><td>5R + 3P + classes</td><td>340 DT</td></tr>
+            <tr><td>7R + 5P + classes</td><td>510 DT</td></tr>
+            <tr><td>16R + 8P + classes</td><td>870 DT</td></tr>
+            <tr><td>38R + 10P + classes</td><td>1520 DT</td></tr>
+          </table>
+          <p class="price-note">R = Reformer &nbsp; P = Privé (Cadillac, Wunda Chair, Barrel, Tower)</p>
+        </div>
+        <div class="price-block">
+          <h3>Pack Privé</h3>
+          <table class="price-table">
+            <tr><td>Pilates Reformer</td><td>35 DT</td></tr>
+            <tr><td>Private session (any machine)</td><td>45 DT</td></tr>
             <tr><td>8 Private sessions</td><td>340 DT</td></tr>
           </table>
-          <p class="price-note" data-i18n="plans.rpLegend">R = Reformer &nbsp; P = Privé (Cadillac, Wunda Chair, Barrel, Tower)</p>
         </div>
       </div>
     </div>
@@ -237,7 +273,7 @@
 </section>
 
 <div class="banner">
-  <div class="banner__bg"><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1600&q=80" alt="" /></div>
+  <div class="banner__bg"><img src="<?= BASE ?>/assets/gym/pilates-5.jpg" alt="" /></div>
   <div class="banner__scrim"></div>
   <div class="wrap banner__inner">
     <div class="barbell barbell--center"><div class="plate small"></div><div class="plate"></div><div class="plate small"></div></div>
@@ -263,8 +299,7 @@
           <h3>EOS Gym</h3>
           <p class="addr" data-i18n="locations.addr">Fitness &amp; Pilates<br>Bizerte Governorate, Tunisia</p>
           <div class="loc__hours">
-            <div><span data-i18n="locations.weekdays">Weekdays</span>6:00a – 10:00p</div>
-            <div><span data-i18n="locations.weekends">Weekends</span>8:00a – 8:00p</div>
+            <div><span data-i18n="stats.hours">Daily Hours</span>8:00a – 10:00p</div>
           </div>
           <a class="loc__link" href="https://www.google.com/maps/place/Eos+gym+%7C+fitness+%26+pilates/@35.7609098,10.8309126,18z/data=!4m6!3m5!1s0x130213328e932abf:0x3764c48c05d7556c!8m2!3d35.7609098!4d10.8322001!16s%2Fg%2F11z22ls4df" target="_blank" rel="noopener" data-i18n="locations.directions">Get Directions
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
@@ -329,3 +364,25 @@
 </footer>
 
 </div>
+<style>
+.stat__num,.hero h1 span{-webkit-text-fill-color:initial;background:none}
+.stats__row .stat:nth-child(odd) .stat__num{color:var(--gold)}
+.stats__row .stat:nth-child(even) .stat__num{color:var(--green-light)}
+.hero h1 span{color:var(--gold-light)}
+.team-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:14px 14px 18px;text-align:center;transition:transform .25s,border-color .25s}
+.team-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.team-card img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center top;border-radius:18px;display:block;margin:0 0 12px}
+.team-card b{display:block;font-size:16px}
+.team-card span{display:block;font-size:12px;opacity:.65;margin-top:2px}
+.team-card:nth-child(even):hover{border-color:var(--green-light)}
+</style>
+<script>
+(function(){
+var T=[].slice.call(document.querySelectorAll('[data-t]'));
+function ap(){var c=((document.getElementById('lang-code')||{}).textContent||'FR').trim().toLowerCase();T.forEach(function(e){try{var d=JSON.parse(e.getAttribute('data-t'));if(d[c])e.textContent=d[c]}catch(x){}})}
+var lc=document.getElementById('lang-code');
+if(lc)new MutationObserver(ap).observe(lc,{childList:true,characterData:true,subtree:true});
+try{if(!localStorage.getItem('eos_fr_default')){localStorage.setItem('eos_fr_default','1');var b=document.querySelector('#lang-menu [data-lang="fr"]');if(b)b.click()}}catch(x){}
+ap();
+})();
+</script>

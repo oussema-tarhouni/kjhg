@@ -12,8 +12,7 @@ function admin_gate_route(string $m, string $p, array $b): array {
   if ($p === 'admin-gate/verify' && $m === 'POST') {
     $k = 'g:' . ($_SERVER['REMOTE_ADDR'] ?? ''); if (throttled($k)) return [429, ['error' => 'Too many attempts. Try again in 15 minutes.']];
     $un = (string)($b['username'] ?? ''); $u = q("SELECT id,password_hash FROM users WHERE (email=? OR name=?) AND role='admin' LIMIT 1", [strtolower($un), $un])->fetch();
-    $dbOk = hash_equals((string)DB_USER, (string)($b['dbUsername'] ?? '')) && (DB_PASS === '' || hash_equals((string)DB_PASS, (string)($b['dbPassword'] ?? '')));
-    $good = $code !== '' && hash_equals($code, (string)($b['code'] ?? '')) && $u && password_verify((string)($b['password'] ?? ''), $u['password_hash']) && $dbOk;
+    $good = $code !== '' && hash_equals($code, (string)($b['code'] ?? '')) && $u && password_verify((string)($b['password'] ?? ''), $u['password_hash']);
     if (!$good) { record_fail($k); return [401, ['error' => 'Invalid credentials']]; }
     session_regenerate_id(true); $_SESSION['admin_uid'] = (int)$u['id']; $_SESSION['admin_seen'] = time(); $_SESSION['admin_token'] = bin2hex(random_bytes(16));
     return [200, ['adminToken' => $_SESSION['admin_token']]];

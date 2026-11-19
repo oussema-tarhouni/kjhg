@@ -140,3 +140,33 @@
 </div>
 
 </div>
+
+<style>
+#auth-slide-layer,#auth-dots{display:none!important}
+#eos-slides{position:absolute;inset:0;overflow:hidden}
+#eos-slides i{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease}
+#eos-slides i.on{opacity:1}
+#eos-dots{display:flex;gap:8px;margin-top:18px}
+#eos-dots b{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.4);transition:all .3s}
+#eos-dots b.on{width:24px;background:var(--gold)}
+</style>
+<script>
+(function(){
+var B="<?= BASE ?>/assets/gym/pilates-",N=[5,2,8];
+var v=document.getElementById('auth-visual'),l=document.getElementById('auth-slide-layer'),d=document.getElementById('auth-dots');
+if(!v||!l)return;
+var w=document.createElement('div');w.id='eos-slides';
+w.innerHTML=N.map(function(n){return '<i style="background-image:url('+B+n+'.jpg)"></i>'}).join('');
+l.parentNode.insertBefore(w,l.nextSibling);
+var dd=document.createElement('div');dd.id='eos-dots';dd.innerHTML=N.map(function(){return '<b></b>'}).join('');
+if(d)d.parentNode.insertBefore(dd,d.nextSibling);
+var s=w.children,p=dd.children,k=0;
+var C=[["Pilates","Retrouvez équilibre et force","Un studio reformer lumineux, avec des coachs attentifs à chaque mouvement."],["Reformer","Des séances qui vous ressemblent","Reformer, Cadillac, Wunda Chair ou Barrel : choisissez votre appareil."],["Studio","Un espace pensé pour vous","Petits groupes, ambiance calme, ouvert tous les jours de 8h à 22h."]];
+var cap=document.querySelector('.auth__caption'),o=['auth-caption-eyebrow','auth-caption-title','auth-caption-text'].map(function(i){return document.getElementById(i)}),n=[];
+o.forEach(function(e,i){if(!e)return;e.style.display='none';var c=document.createElement(e.tagName);c.className=e.className;c.style.transition='opacity .35s';e.parentNode.insertBefore(c,e);n[i]=c});
+function go(){var t=C[k%C.length];n.forEach(function(c){c.style.opacity=0});
+for(var j=0;j<s.length;j++){s[j].className=j==k?'on':'';p[j].className=j==k?'on':''}
+setTimeout(function(){n.forEach(function(c,i){c.textContent=t[i];c.style.opacity=1})},350);k=(k+1)%s.length}
+go();setInterval(go,5000);
+})();
+</script>

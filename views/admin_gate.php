@@ -4,12 +4,6 @@
     <label>Username
       <input value="<?= h($username) ?>" name="username" required />
     </label>
-    <label>DB Username
-      <input value="<?= h($dbUsername) ?>" name="dbUsername" required />
-    </label>
-    <label>DB Password
-      <input type="password" value="<?= h($dbPassword) ?>" name="dbPassword" />
-    </label>
     <label>Password
       <input type="password" value="<?= h($password) ?>" name="password" required />
     </label>

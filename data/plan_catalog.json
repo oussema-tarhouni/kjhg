@@ -4,66 +4,107 @@
   "label": "Musculation",
   "groups": [
    {
-    "title": "MEMBERSHIP",
+    "title": "MUSCULATION + COURS",
     "tiers": [
      {
-      "key": 101,
+      "key": 301,
       "planId": null,
-      "label": "1 Month",
-      "price": 90
+      "label": "1 Mois",
+      "price": 110
      },
      {
-      "key": 102,
+      "key": 302,
       "planId": null,
-      "label": "2 Months",
-      "price": 160
-     },
-     {
-      "key": 103,
-      "planId": null,
-      "label": "3 Months",
+      "label": "2 Mois",
       "price": 180
      },
      {
-      "key": 104,
+      "key": 303,
       "planId": null,
-      "label": "6 Months",
-      "price": 340
+      "label": "3 Mois",
+      "price": 250
      },
      {
-      "key": 105,
+      "key": 304,
       "planId": null,
-      "label": "12 Months",
-      "price": 700
+      "label": "6 Mois",
+      "price": 450
+     },
+     {
+      "key": 305,
+      "planId": null,
+      "label": "12 Mois",
+      "price": 750
      }
     ]
    },
    {
-    "title": "PRIVATE COACHING",
+    "title": "MUSCULATION + COURS + PILATES",
     "tiers": [
      {
-      "key": 106,
+      "key": 306,
       "planId": null,
-      "label": "1 Session",
+      "label": "1 Mois + cours + 8 R",
+      "price": 360
+     },
+     {
+      "key": 307,
+      "planId": null,
+      "label": "2 Mois + cours + 16 R",
+      "price": 640
+     },
+     {
+      "key": 308,
+      "planId": null,
+      "label": "3 Mois + cours + 24 R",
+      "price": 800
+     },
+     {
+      "key": 309,
+      "planId": null,
+      "label": "6 Mois + cours + 48 R",
+      "price": 1530
+     }
+    ],
+    "note": "R = Pilates reformer"
+   },
+   {
+    "title": "COACHING PRIVÉ",
+    "tiers": [
+     {
+      "key": 310,
+      "planId": null,
+      "label": "1 Séance",
       "price": 30
      },
      {
-      "key": 107,
+      "key": 311,
       "planId": null,
-      "label": "8 Sessions",
+      "label": "8 Séances",
       "price": 200
      },
      {
-      "key": 108,
+      "key": 312,
       "planId": null,
-      "label": "16 Sessions",
+      "label": "16 Séances",
       "price": 320
+     }
+    ]
+   },
+   {
+    "title": "MUSCULATION PAR SÉANCE",
+    "tiers": [
+     {
+      "key": 313,
+      "planId": null,
+      "label": "1 Séance",
+      "price": 10
      },
      {
-      "key": 109,
+      "key": 314,
       "planId": null,
-      "label": "Drop-in floor session",
-      "price": 10
+      "label": "1 Séance cours",
+      "price": 20
      }
     ]
    }
@@ -74,112 +115,171 @@
   "label": "Pilates",
   "groups": [
    {
-    "title": "REFORMER — ESSENTIEL",
+    "title": "PACK ESSENTIEL : PILATES REFORMER",
     "tiers": [
      {
-      "key": 201,
+      "key": 315,
       "planId": null,
-      "label": "8 sessions · 30 days",
+      "label": "8 R · 30 jours",
       "price": 260
      },
      {
-      "key": 202,
+      "key": 316,
       "planId": null,
-      "label": "12 sessions · 45 days",
+      "label": "12 R · 45 jours",
       "price": 360
      },
      {
-      "key": 203,
+      "key": 317,
       "planId": null,
-      "label": "24 sessions · 90 days",
+      "label": "24 R · 90 jours",
       "price": 550
      },
      {
-      "key": 204,
+      "key": 318,
       "planId": null,
-      "label": "48 sessions · 180 days",
+      "label": "48 R · 180 jours",
       "price": 1050
      }
     ]
    },
    {
-    "title": "REFORMER + PRIVÉ — PREMIUM",
+    "title": "PACK PREMIUM : REFORMER + PRIVÉ",
     "tiers": [
      {
-      "key": 205,
+      "key": 319,
       "planId": null,
-      "label": "5R + 3P · 30 days",
+      "label": "5 R + 3 P · 30 jours",
       "price": 290
      },
      {
-      "key": 206,
+      "key": 320,
       "planId": null,
-      "label": "7R + 5P · 45 days",
+      "label": "7 R + 5 P · 45 jours",
       "price": 420
      },
      {
-      "key": 207,
+      "key": 321,
       "planId": null,
-      "label": "16R + 8P · 90 days",
+      "label": "16 R + 8 P · 90 jours",
       "price": 750
      },
      {
-      "key": 208,
+      "key": 322,
       "planId": null,
-      "label": "38R + 10P · 180 days",
+      "label": "38 R + 10 P · 180 jours",
       "price": 1300
      }
-    ]
+    ],
+    "note": "R = Pilates reformer · P = Pilates Privé (Cadillac, Wunda Chair, Barrel, Tower)"
    },
    {
-    "title": "PILATES + MUSCULATION — INTÉGRAL",
+    "title": "PACK INTÉGRAL : PILATES + MUSCULATION",
     "tiers": [
      {
-      "key": 209,
+      "key": 323,
       "planId": null,
-      "label": "1 Month · 8 R",
+      "label": "1 Mois · Musculation + 8 R",
       "price": 320
      },
      {
-      "key": 210,
+      "key": 324,
       "planId": null,
-      "label": "3 Months · 24 R",
+      "label": "3 Mois · Musculation + 24 R",
       "price": 700
      },
      {
-      "key": 211,
+      "key": 325,
       "planId": null,
-      "label": "6 Months · 48 R",
+      "label": "6 Mois · Musculation + 48 R",
       "price": 1350
      },
      {
-      "key": 212,
+      "key": 326,
       "planId": null,
-      "label": "12 Months · 100 R",
+      "label": "12 Mois · Musculation + 100 R",
       "price": 2650
      }
     ]
    },
    {
-    "title": "PRIVATE SESSIONS",
-    "note": "R = Reformer  P = Privé (Cadillac, Wunda Chair, Barrel, Tower)",
+    "title": "PACK BALANCE : PILATES + COURS",
     "tiers": [
      {
-      "key": 213,
+      "key": 327,
       "planId": null,
-      "label": "Reformer",
+      "label": "1 Mois + 8 R",
+      "price": 300
+     },
+     {
+      "key": 328,
+      "planId": null,
+      "label": "2 Mois + 16 R",
+      "price": 560
+     },
+     {
+      "key": 329,
+      "planId": null,
+      "label": "3 Mois + 24 R",
+      "price": 670
+     },
+     {
+      "key": 330,
+      "planId": null,
+      "label": "6 Mois + 48 R",
+      "price": 1290
+     }
+    ]
+   },
+   {
+    "title": "PACK SUPER PREMIUM : REFORMER + PRIVÉ + COURS",
+    "tiers": [
+     {
+      "key": 331,
+      "planId": null,
+      "label": "5 R + 3 P + cours",
+      "price": 340
+     },
+     {
+      "key": 332,
+      "planId": null,
+      "label": "7 R + 5 P + cours",
+      "price": 510
+     },
+     {
+      "key": 333,
+      "planId": null,
+      "label": "16 R + 8 P + cours",
+      "price": 870
+     },
+     {
+      "key": 334,
+      "planId": null,
+      "label": "38 R + 10 P + cours",
+      "price": 1520
+     }
+    ],
+    "note": "R = Pilates reformer · P = Pilates Privé (Cadillac, Wunda Chair, Barrel, Tower)"
+   },
+   {
+    "title": "PACK PRIVÉ",
+    "tiers": [
+     {
+      "key": 335,
+      "planId": null,
+      "label": "Pilates Reformer",
       "price": 35
      },
      {
-      "key": 214,
+      "key": 336,
       "planId": null,
-      "label": "Private (any machine)",
+      "label": "Séance privée (appareil au choix)",
       "price": 45
      },
      {
-      "key": 215,
+      "key": 337,
       "planId": null,
-      "label": "8 Private sessions",
+      "label": "8 Séances privées (appareil au choix)",
       "price": 340
      }
     ]
