@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   elseif (!$valid) $error = 'This plan is not available right now';
   else {
     $s = api_request('POST', 'auth/subscription', ['category' => $activeCat['key'], 'planId' => $selected]);
-    if ($s['status'] < 300) { unset($_SESSION['signup_category']); redirect('pending'); }
+    if ($s['status'] < 300) { unset($_SESSION['signup_category']); redirect(defined('AUTO_APPROVE_USERS') && AUTO_APPROVE_USERS ? 'app' : 'pending'); }
     $error = api_error($s, 'Something went wrong, please try again');
   }
 }

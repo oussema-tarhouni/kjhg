@@ -1,0 +1,7 @@
+[2026-11-15T22:56:28+01:00] TypeError: api_me(): Return value must be of type ?array, none returned in C:\xampp\htdocs\lib\local_api.php:19
+Stack trace:
+#0 C:\xampp\htdocs\lib\local_api.php(42): api_me()
+#1 C:\xampp\htdocs\lib\local_api.php(26): api_route('POST', 'auth/register', Array, Array)
+#2 C:\xampp\htdocs\api\proxy.php(10): api_request('POST', 'auth/register', Array, Array)
+#3 C:\xampp\htdocs\index.php(7): require('C:\\xampp\\htdocs...')
+#4 {main}

@@ -1,5 +1,7 @@
 <?php
 require_admin();
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_SERVER['HTTP_ORIGIN']) && parse_url($_SERVER['HTTP_ORIGIN'], PHP_URL_HOST) !== parse_url('//' . $_SERVER['HTTP_HOST'], PHP_URL_HOST)) { http_response_code(403); exit('Forbidden'); }
+header('Cache-Control: no-store'); header('X-Frame-Options: DENY');
 $defs = json_decode(file_get_contents(__DIR__ . '/../data/admin_defs.json'), true);
 $bySlug = []; foreach ($defs as $d) $bySlug[$d['key']] = $d;
 $section = $_GET['s'] ?? 'resource';

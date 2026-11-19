@@ -9,7 +9,7 @@ function start_session(): void {
   }
 }
 function layout_begin(string $title, array $css = [], string $bodyAttr = ''): void {
-  echo '<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>' . h($title) . '</title>'
+  echo '<!doctype html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><title>' . h($title) . '</title>'
      . '<base href="' . h(BASE) . '/">' . '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
      . '<link rel="icon" type="image/svg+xml" href="' . url('assets/logo.svg') . '">'
      . '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'

@@ -219,6 +219,12 @@
 
       <div class="page" id="page-store">
         <div class="section-title">STORE</div>
+        <div class="coming-soon" style="text-align:center;padding:90px 20px;">
+          <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="#e6cc7a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <h2 style="margin:18px 0 8px;font-size:28px;">Coming soon</h2>
+          <p style="opacity:.7;">Our store is on its way. Stay tuned!</p>
+        </div>
+        <div style="display:none" aria-hidden="true">
         <div class="store-search-row">
           <div class="store-search">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21L16.65 16.65" stroke-linecap="round"/></svg>
@@ -240,6 +246,7 @@
         <div class="store-bar"><span id="storeRange"></span><div class="store-pager"></div></div>
         <div class="store-grid" id="storeGrid"><div class="product-card">Loading…</div></div>
         <div class="store-bar"><span></span><div class="store-pager"></div></div>
+        </div>
       </div>
 
       <div class="page" id="page-store-search">

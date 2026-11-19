@@ -160,21 +160,5 @@ export function initFakeSubmit(formId, btnId, onDone) {
     });
 }
 export function initThemeToggle() {
-    let th = 'light';
-    try {
-        th = localStorage.getItem('theme') || 'light';
-    }
-    catch { }
-    document.documentElement.setAttribute('data-theme', th);
-    const btn = document.getElementById('theme-btn');
-    if (!btn)
-        return;
-    btn.addEventListener('click', () => {
-        const n = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', n);
-        try {
-            localStorage.setItem('theme', n);
-        }
-        catch { }
-    });
+    document.documentElement.setAttribute('data-theme', 'dark'); // dark mode only
 }

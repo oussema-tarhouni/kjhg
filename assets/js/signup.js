@@ -48,8 +48,7 @@ class SignupComponent {
             submitBtn.disabled = true;
             try {
                 await this.auth.register(name, email, phone, password);
-                await this.auth.sendOtp();
-                this.router.navigate(['/verify-otp'], { queryParams: { email } });
+                this.router.navigate(['/select-plan']); // OTP skipped
             }
             catch (err) {
                 const msg = err?.error?.error || 'Une erreur est survenue';

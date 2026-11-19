@@ -25,7 +25,7 @@ export class AuthService {
   // NOTE: missing from the repo's AuthService copy - endpoint assumed (PUT /auth/me, multipart). Adjust if your API differs.
   async updateProfile(name, email, avatar) {
     const fd = new FormData(); fd.append('name', name); fd.append('email', email); if (avatar) fd.append('avatar', avatar);
-    const r = await http('PUT', 'auth/me', fd); return r.user || r;
+    const r = await http('POST', 'auth/me', fd); return r.user || r;
   }
 }
 export class ClassesService {

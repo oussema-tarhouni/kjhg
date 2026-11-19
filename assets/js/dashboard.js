@@ -9,20 +9,7 @@ class DashboardComponent {
         document.getElementById('themeSwitch')?.setAttribute('aria-checked', String(theme === 'dark'));
     }
     initTheme() {
-        let saved = 'light';
-        try {
-            saved = localStorage.getItem('theme') || 'light';
-        }
-        catch { }
-        this.applyTheme(saved);
-        if (window.__themeBound)
-            return;
-        window.__themeBound = true;
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('#themeMenuItem')) {
-                this.applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
-            }
-        });
+        this.applyTheme('dark'); // dark mode only
     }
     constructor(auth, router, classesApi, storeApi) {
         this.auth = auth;
@@ -247,6 +234,7 @@ class DashboardComponent {
         const grid = document.getElementById('storeGrid');
         if (!grid)
             return;
+        return; // store: coming soon
         this.storeCategory = filter;
         try {
             if (filter === 'all' || !this.products.length) {

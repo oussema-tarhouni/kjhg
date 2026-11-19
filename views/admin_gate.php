@@ -8,7 +8,7 @@
       <input value="<?= h($dbUsername) ?>" name="dbUsername" required />
     </label>
     <label>DB Password
-      <input type="password" value="<?= h($dbPassword) ?>" name="dbPassword" required />
+      <input type="password" value="<?= h($dbPassword) ?>" name="dbPassword" />
     </label>
     <label>Password
       <input type="password" value="<?= h($password) ?>" name="password" required />

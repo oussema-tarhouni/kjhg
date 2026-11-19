@@ -2,7 +2,7 @@
 // $code comes from the router (/admin/:code) = gateCodeGuard
 $c = api_request('GET', 'admin-gate/check/' . rawurlencode($code));
 if ($c['status'] >= 300 || empty($c['data']['ok'])) redirect('');
-$error = '';
+$error = ''; $username = $_POST['username'] ?? ''; $dbUsername = $_POST['dbUsername'] ?? ''; $dbPassword = ''; $password = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $r = api_request('POST', 'admin-gate/verify', ['code' => $code, 'username' => $_POST['username'] ?? '', 'dbUsername' => $_POST['dbUsername'] ?? '',
     'dbPassword' => $_POST['dbPassword'] ?? '', 'password' => $_POST['password'] ?? '']);

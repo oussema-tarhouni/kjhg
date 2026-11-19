@@ -29,3 +29,7 @@ html, body {
 * {
   box-sizing: border-box;
 }
+
+/* dark mode only */
+.theme-btn,#themeMenuItem{display:none!important}
+#cartBtn,#cartPanel{display:none!important} /* store coming soon */
