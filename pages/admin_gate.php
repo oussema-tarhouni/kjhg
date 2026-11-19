@@ -1,13 +1,13 @@
-<div class="gate-shell">
-  <form class="gate-card" method="post">
-    <h2>Admin Access</h2>
-    <label>Username
-      <input value="<?= h($username) ?>" name="username" required />
-    </label>
-    <label>Password
-      <input type="password" value="<?= h($password) ?>" name="password" required />
-    </label>
-    <?php if ($error): ?><p class="gate-error"><?= h($error) ?></p><?php endif; ?>
-    <button type="submit" >Continue</button>
-  </form>
-</div>
+<?php
+// $code comes from the router (/admin/:code) = gateCodeGuard
+$c = api_request('GET', 'admin-gate/check/' . rawurlencode($code));
+if ($c['status'] >= 300 || empty($c['data']['ok'])) redirect('');
+$error = ''; $username = $_POST['username'] ?? ''; $password = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $r = api_request('POST', 'admin-gate/verify', ['code' => $code, 'username' => $_POST['username'] ?? '', 'password' => $_POST['password'] ?? '']);
+  if ($r['status'] < 300 && !empty($r['data']['adminToken'])) { $_SESSION['admin_token'] = $r['data']['adminToken']; redirect('access-admin'); }
+  $error = api_error($r, 'Invalid credentials');
+}
+layout_begin('Admin Access', ['admin-gate']);
+include __DIR__ . '/../views/admin_gate.php';
+layout_end();
