@@ -34,5 +34,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 }
 layout_begin('Choose your plan · EOS Gym', ['auth-shared', 'plan']);
-include __DIR__ . '/../views/plan.php';
+include __DIR__ . '/../views/plan_body.php';
 theme_script(); layout_end();

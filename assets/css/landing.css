@@ -395,6 +395,7 @@ img {
   color: var(--gray);
   font-size: 17px;
   line-height: 1.6;
+  text-align: center;
 }
 .hero__ctas {
   display: flex;

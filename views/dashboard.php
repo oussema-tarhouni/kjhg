@@ -382,9 +382,32 @@
           <div class="chip active" data-category="all">All</div>
         </div>
 
-        <div class="class-grid" id="scheduleClassGrid">
-          <div class="class-card"><div class="class-info">Loading…</div></div>
+        <div class="plans-tabs" id="scheduleTabs">
+          <button type="button" class="plans-tab is-active" data-sched-tab="collectifs">Cours collectifs</button>
+          <button type="button" class="plans-tab" data-sched-tab="pilates">Cours pilates</button>
         </div>
+
+        <div class="plans-panel is-active" id="sched-panel-collectifs">
+          <div class="class-grid" id="scheduleClassGrid" data-group="collectifs">
+            <div class="class-card"><div class="class-info">Loading…</div></div>
+          </div>
+        </div>
+
+        <div class="plans-panel" id="sched-panel-pilates">
+          <div class="class-grid" id="schedulePilatesGrid" data-group="pilates">
+            <div class="class-card"><div class="class-info">Loading…</div></div>
+          </div>
+        </div>
+        <script>
+        document.getElementById('scheduleTabs').addEventListener('click',function(e){
+          var b=e.target.closest('[data-sched-tab]'); if(!b) return;
+          var t=b.dataset.schedTab;
+          document.querySelectorAll('#scheduleTabs .plans-tab').forEach(function(x){x.classList.toggle('is-active',x===b);});
+          ['collectifs','pilates'].forEach(function(k){
+            document.getElementById('sched-panel-'+k).classList.toggle('is-active',k===t);
+          });
+        });
+        </script>
       </div>
 
       <div class="page" id="page-plans">

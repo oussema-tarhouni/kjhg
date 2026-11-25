@@ -65,7 +65,7 @@ class LandingComponent {
                     'about.eyebrow': 'À propos', 'about.title': 'Une salle construite par des gens qui s\'entraînent vraiment ici',
                     'about.p1': "EOS a commencé comme un seul plateau de musculation et une conviction tenace : une salle doit appartenir à ses membres, pas l'inverse. Dix ans plus tard, rien n'a changé — les mêmes coachs qui ont conçu les programmes sont toujours là à corriger vos mouvements.",
                     'about.p2': "Nous avons réuni trois espaces sous un même toit : un vrai plateau de poids libres et machines, un studio de pilates reformer où les instructeurs surveillent chaque répétition, et un planning de cours que les gens suivent vraiment. Peu importe la porte que vous franchissez, quelqu'un connaît votre nom et vos objectifs.",
-                    'about.badge.title': 'Depuis 2014', 'about.badge.sub': 'Propriété locale, toujours coachée',
+                    'about.badge.title': 'Depuis 2025', 'about.badge.sub': 'Propriété locale, toujours coachée',
                     'about.pillar1.title': 'Plateau Musculation', 'about.pillar1.desc': 'Poids libres &amp; machines, zéro attente.',
                     'about.pillar2.title': 'Studio Pilates', 'about.pillar2.desc': 'Reformer &amp; tapis, petits groupes.',
                     'about.pillar3.title': 'Communauté', 'about.pillar3.desc': 'App membres &amp; vrai accueil.',
